@@ -21,33 +21,20 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func switchedView(_ sender: UIBarButtonItem) {
-//        switch segmentedControl.selectedSegmentIndex {
-//        case 0:
-//            print("Table")
-//            self.navigationItem.title = "Working 1"
-//
-//        case 1:
-//            print("Map")
-//            self.navigationItem.title = "Working 2"
-//
-//
-//        default:
-//            print("default")
-//        }\
+    @IBAction func switchedView(_ sender: Any) {
+                if segmentedControl.selectedSegmentIndex == 0 {
+                    tableView.reloadData()
+                    reloadInputViews()
+                    self.navigationItem.title = "Working 1"
+                } else {
+                    tableView.reloadData()
+                    reloadInputViews()
+                    self.navigationItem.title = "Working 2"
+                }
+                tableView.reloadData()
         
-        if segmentedControl.selectedSegmentIndex == 0 {
-            tableView.reloadData()
-            reloadInputViews()
-            self.navigationItem.title = "Working 1"
-        } else {
-            tableView.reloadData()
-            reloadInputViews()
-            self.navigationItem.title = "Working 2"
-        }
-        tableView.reloadData()
     }
+    
     
     
     

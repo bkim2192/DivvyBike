@@ -48,10 +48,10 @@
                                     <segment title="Table"/>
                                     <segment title="Map"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchedView:" destination="BYZ-38-t0r" eventType="valueChanged" id="CDP-Bo-e9A"/>
+                                </connections>
                             </segmentedControl>
-                            <connections>
-                                <action selector="switchedView:" destination="BYZ-38-t0r" id="5M0-aq-K9I"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
