@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                 
                 
                 DispatchQueue.main.async {
-                    self.navigationItem.title = "Weather For: "
+                    self.navigationItem.title = "Stations of Chicago"
                     self.tableView.reloadData()
                 }
                 
