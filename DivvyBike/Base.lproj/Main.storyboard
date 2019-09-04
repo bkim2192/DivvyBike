@@ -39,8 +39,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7bB-dJ-6Eq"/>
+                    <navigationItem key="navigationItem" id="7bB-dJ-6Eq">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="bKC-Pl-TPg">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="eRn-mE-dpx">
+                                <rect key="frame" x="289" y="5.5" width="105" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Table"/>
+                                    <segment title="Map"/>
+                                </segments>
+                            </segmentedControl>
+                            <connections>
+                                <action selector="switchedView:" destination="BYZ-38-t0r" id="5M0-aq-K9I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="segmentedControl" destination="eRn-mE-dpx" id="unW-Wi-h0D"/>
                         <outlet property="tableView" destination="HXI-vq-yAO" id="k6N-K0-urz"/>
                     </connections>
                 </viewController>

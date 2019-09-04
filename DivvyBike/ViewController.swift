@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    
     var stationsArray:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +20,43 @@ class ViewController: UIViewController, UITableViewDataSource {
         JSON()
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func switchedView(_ sender: UIBarButtonItem) {
+//        switch segmentedControl.selectedSegmentIndex {
+//        case 0:
+//            print("Table")
+//            self.navigationItem.title = "Working 1"
+//
+//        case 1:
+//            print("Map")
+//            self.navigationItem.title = "Working 2"
+//
+//
+//        default:
+//            print("default")
+//        }\
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            tableView.reloadData()
+            reloadInputViews()
+            self.navigationItem.title = "Working 1"
+        } else {
+            tableView.reloadData()
+            reloadInputViews()
+            self.navigationItem.title = "Working 2"
+        }
+        tableView.reloadData()
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stationsArray.count
     }
@@ -25,7 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.backgroundColor = .black
         cell.textLabel?.textColor = .white
         cell.detailTextLabel?.textColor = .white
-        cell.backgroundColor = .systemBlue
+        cell.backgroundColor = UIColor(red: 0.1, green: 0.5, blue: 0.6, alpha: 1.0)
         cell.textLabel?.text = "\(stationsArray[indexPath.row])"
         
         return cell
