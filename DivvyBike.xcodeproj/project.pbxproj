@@ -13,6 +13,7 @@
 		F613453D231EEA9E0064658B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F613453B231EEA9E0064658B /* Main.storyboard */; };
 		F613453F231EEA9F0064658B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F613453E231EEA9F0064658B /* Assets.xcassets */; };
 		F6134542231EEA9F0064658B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6134540231EEA9F0064658B /* LaunchScreen.storyboard */; };
+		F6E911BA23218E430053FD1D /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E911B923218E430053FD1D /* mapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F613453E231EEA9F0064658B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6134541231EEA9F0064658B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6134543231EEA9F0064658B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E911B923218E430053FD1D /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F613453E231EEA9F0064658B /* Assets.xcassets */,
 				F6134540231EEA9F0064658B /* LaunchScreen.storyboard */,
 				F6134543231EEA9F0064658B /* Info.plist */,
+				F6E911B923218E430053FD1D /* mapViewController.swift */,
 			);
 			path = DivvyBike;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				F613453A231EEA9E0064658B /* ViewController.swift in Sources */,
 				F6134536231EEA9E0064658B /* AppDelegate.swift in Sources */,
 				F6134538231EEA9E0064658B /* SceneDelegate.swift in Sources */,
+				F6E911BA23218E430053FD1D /* mapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

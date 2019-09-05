@@ -23,15 +23,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func switchedView(_ sender: Any) {
                 if segmentedControl.selectedSegmentIndex == 0 {
-                    tableView.reloadData()
-                    reloadInputViews()
-                    self.navigationItem.title = "Working 1"
+                    
+                    self.navigationItem.title = "Stations of Chicago"
+                    
                 } else {
-                    tableView.reloadData()
-                    reloadInputViews()
-                    self.navigationItem.title = "Working 2"
+                    self.navigationItem.title = "Map of Stations"
+                    
                 }
-                tableView.reloadData()
+                
         
     }
     
