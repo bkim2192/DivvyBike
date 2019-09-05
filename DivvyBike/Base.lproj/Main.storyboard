@@ -50,7 +50,7 @@
                                 </segments>
                                 <connections>
                                     <action selector="switchedView:" destination="BYZ-38-t0r" eventType="valueChanged" id="CDP-Bo-e9A"/>
-                                    <segue destination="Ptv-5t-rhA" kind="show" id="e64-cI-iYr"/>
+                                    <segue destination="Ptv-5t-rhA" kind="show" identifier="seguee" id="e64-cI-iYr"/>
                                 </connections>
                             </segmentedControl>
                         </barButtonItem>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="107.8125"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View-->
         <scene sceneID="GOY-ZB-P9I">
             <objects>
-                <viewController id="Ptv-5t-rhA" sceneMemberID="viewController">
+                <viewController id="Ptv-5t-rhA" customClass="mapView" customModule="DivvyBike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3sV-Z9-MsW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

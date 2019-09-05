@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
-    
+    var seconds = 0
+    var timer = Timer()
     var stationsArray:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,16 @@ class ViewController: UIViewController, UITableViewDataSource {
                     
                     self.navigationItem.title = "Stations of Chicago"
                     
+                    
+                    
                 } else {
                     self.navigationItem.title = "Map of Stations"
+                    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: false)
+                    
+                    if seconds == 5 {
+                    
+                    segmentedControl.selectedSegmentIndex = 0
+                    }
                     
                 }
                 
@@ -35,7 +43,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     
-    
+    @objc func action() {
+        seconds += 1
+    }
     
     
     
