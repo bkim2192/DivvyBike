@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var itemButton: UIBarButtonItem!
     var seconds = 0
     var timer = Timer()
     var stationsArray:[String] = []
@@ -21,6 +22,17 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
+    @IBAction func itemCancel(_ sender: Any) {
+        shouldPerformSegue(withIdentifier: "seguee", sender: (Any).self)
+       
+    }
+    
+    
+    
+    
     @IBAction func switchedView(_ sender: Any) {
                 if segmentedControl.selectedSegmentIndex == 0 {
                     
@@ -29,13 +41,9 @@ class ViewController: UIViewController, UITableViewDataSource {
                     
                     
                 } else {
-                    self.navigationItem.title = "Map of Stations"
-                    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: false)
                     
-                    if seconds == 5 {
-                    
+                    performSegue(withIdentifier: "seguee", sender: segmentedControl)
                     segmentedControl.selectedSegmentIndex = 0
-                    }
                     
                 }
                 
